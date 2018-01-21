@@ -35,6 +35,102 @@ html, body{
 	background: url(image/bg/contact.png)no-repeat;
 }
 
+.touch-bar {
+	position: fixed;
+	bottom: 49px;
+}
+.down-menu{
+	list-style: none;
+}
+.down-menu li{
+	display: inline-block;
+}
+.diamond {
+	width: 44px;
+	height: 44px;
+	border: 1px solid #000;
+	/*margin: 3px 0 0 30px;*/
+	/* Rotate */
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	/* Rotate Origin */
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	position: absolute;
+}
+.left-diamond{
+	top: 11px;
+	left: 41px;
+}
+.right-diamond{
+	right: 41px;
+	top: 11px;
+}
+.circle:first-child{
+	margin-left: 22px;
+}
+.circle {
+	margin-right: 170px;
+	position: relative;
+}
+.circle:before{
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 9px;
+	height: 9px;
+	background: #000;
+	border-radius: 50%;
+}
+.circle:after{
+	content: '';
+	position: absolute;
+	top: 9px;
+	left: 4px;
+	width: 170px;
+	height: 1px;
+	background: #000;
+}
+.circle:last-child{
+	margin-right: 0;
+}
+.circle:last-child:after{
+	width: 0;
+}
+.circle:hover:before{
+	width: 32px;
+	height: 32px;
+	border: 1px solid #000;
+	/*margin: 3px 0 0 30px;*/
+	/* Rotate */
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	/* Rotate Origin */
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	position: absolute;
+	top: 0px;
+	border-radius: 0;
+}
+.circle:first-child:hover:before{
+	left: 4px;
+}
+.circle:last-child:hover:before{
+	left: 5px;
+}
 @media (min-width: 1201px) {
 
 }

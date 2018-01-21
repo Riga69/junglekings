@@ -6,3 +6,47 @@ html, body{
 	width: 100%;
 	body: 100%;
 }
+
+.page{
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+}
+
+#main{
+	background: url(image/bg/main.png)no-repeat;
+}
+#live{
+	background: url(image/bg/live.png)no-repeat;
+}
+#style{
+	background: url(image/bg/style.png)no-repeat;
+}
+#teacher{
+	background: #fff;
+}
+#review{
+	background: #fff;
+}
+#schudele{
+	background: url(image/bg/schudele.png)no-repeat;
+}
+#contact{
+	background: url(image/bg/contact.png)no-repeat;
+}
+
+@media (min-width: 1201px) {
+
+}
+
+@media (min-width: 961px) and (max-width: 1200px) {
+
+}
+
+@media (min-width: 751px) and (max-width: 960px) {
+
+}
+
+@media (max-width: 750px) {
+
+}

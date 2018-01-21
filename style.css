@@ -35,6 +35,8 @@ html, body{
 	background: url(image/bg/contact.png)no-repeat;
 }
 
+/* menu down */
+
 .touch-bar {
 	position: fixed;
 	bottom: 49px;
@@ -131,18 +133,36 @@ html, body{
 .circle:last-child:hover:before{
 	left: 5px;
 }
-@media (min-width: 1201px) {
+.block-down-menu{
+	margin-bottom: 35px;
+}
+
+/* Общие настройки */
+
+.size-12{
+	font-size: 12px;
+}
+
+/* Mobile version */
+@media (min-width: 1200px) {
 
 }
 
-@media (min-width: 961px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1199px) {
 
 }
 
-@media (min-width: 751px) and (max-width: 960px) {
-
+@media (min-width: 768px) and (max-width: 991px) {
+	.circle{
+		margin-right: 100px;
+	}
+	.circle:last-child:after{
+		width: 0;
+	}
 }
 
-@media (max-width: 750px) {
-
+@media (max-width: 767px) {
+	.block-down-menu{
+		display: none;
+	}
 }

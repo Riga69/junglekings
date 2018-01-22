@@ -4,7 +4,7 @@
 }
 html, body{
 	width: 100%;
-	body: 100%;
+	height: 100vh;
 }
 
 .page{
@@ -34,6 +34,59 @@ html, body{
 #contact{
 	background: url(image/bg/contact.png)no-repeat;
 }
+
+/* Общие настройки */
+
+.size-12{
+	font-size: 12px;
+}
+.text-center{
+	text-align: center;
+}
+.container{
+	width: 1200px;
+	margin: auto;
+}
+
+/* menu up */
+
+.main-menu{
+	padding-top: 10px;
+}
+.up-menu{
+	list-style: none;
+}
+.up-menu li{
+	display: inline-block;
+}
+.main-li:last-child{
+	padding-right: 0;
+}
+.main-li{
+	padding-right: 40px;
+	padding-top: 39px;
+}
+.logo-li{
+	background-image: url(image/icons/logo-black.png);
+	background-repeat: no-repeat;
+	width: 74px;
+	height: 84px;
+	/*background-position: -5px -5px;*/
+	position: absolute;
+	background-size: cover;
+}
+.logo-li ~ .main-li{
+	padding-right: 0;
+	padding-left: 40px;
+}
+.pad-lef{
+	margin-left: 75px;
+}
+
+
+
+
+
 
 /* menu down */
 
@@ -68,17 +121,17 @@ html, body{
 }
 .left-diamond{
 	top: 11px;
-	left: 41px;
+	left: 56px;
 }
 .right-diamond{
-	right: 41px;
+	right: -51px;
 	top: 11px;
 }
 .circle:first-child{
-	margin-left: 22px;
+	margin-left: 52px;
 }
 .circle {
-	margin-right: 170px;
+	margin-right: 178px;
 	position: relative;
 }
 .circle:before{
@@ -96,7 +149,7 @@ html, body{
 	position: absolute;
 	top: 9px;
 	left: 4px;
-	width: 170px;
+	width: 178px;
 	height: 1px;
 	background: #000;
 }
@@ -126,6 +179,7 @@ html, body{
 	position: absolute;
 	top: 0px;
 	border-radius: 0;
+	cursor: pointer;
 }
 .circle:first-child:hover:before{
 	left: 4px;
@@ -137,11 +191,6 @@ html, body{
 	margin-bottom: 35px;
 }
 
-/* Общие настройки */
-
-.size-12{
-	font-size: 12px;
-}
 
 /* Mobile version */
 @media (min-width: 1200px) {

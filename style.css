@@ -10,7 +10,12 @@ html, body{
 .page{
 	width: 100%;
 	height: 100vh;
-	background-size: cover;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+	-webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+	-o-background-size: 100%; /* Opera 9.6+ */
+	background-size: 100%; /* Современные браузеры */
+	position: relative;
+	z-index: 1;
 }
 
 #main{
@@ -51,7 +56,9 @@ html, body{
 /* menu up */
 
 .main-menu{
-	padding-top: 10px;
+	position: fixed;
+	top: 10px;
+	z-index: 2
 }
 .up-menu{
 	list-style: none;
@@ -71,7 +78,6 @@ html, body{
 	background-repeat: no-repeat;
 	width: 74px;
 	height: 84px;
-	/*background-position: -5px -5px;*/
 	position: absolute;
 	background-size: cover;
 }
@@ -82,17 +88,23 @@ html, body{
 .pad-lef{
 	margin-left: 75px;
 }
-
-
-
-
-
+.mobile-logo{
+	background-image: url(image/icons/logo-black.png);
+	background-repeat: no-repeat;
+	width: 74px;
+	height: 84px;
+	position: absolute;
+	background-size: cover;
+	right: 24px;
+	top: 15px;
+}
 
 /* menu down */
 
 .touch-bar {
 	position: fixed;
 	bottom: 49px;
+	z-index: 2
 }
 .down-menu{
 	list-style: none;
@@ -104,14 +116,11 @@ html, body{
 	width: 44px;
 	height: 44px;
 	border: 1px solid #000;
-	/*margin: 3px 0 0 30px;*/
-	/* Rotate */
 	-webkit-transform: rotate(-45deg);
 	-moz-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg);
-	/* Rotate Origin */
 	-webkit-transform-origin: 0 100%;
 	-moz-transform-origin: 0 100%;
 	-ms-transform-origin: 0 100%;
@@ -163,14 +172,11 @@ html, body{
 	width: 32px;
 	height: 32px;
 	border: 1px solid #000;
-	/*margin: 3px 0 0 30px;*/
-	/* Rotate */
 	-webkit-transform: rotate(-45deg);
 	-moz-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg);
-	/* Rotate Origin */
 	-webkit-transform-origin: 0 100%;
 	-moz-transform-origin: 0 100%;
 	-ms-transform-origin: 0 100%;
@@ -191,27 +197,76 @@ html, body{
 	margin-bottom: 35px;
 }
 
-
 /* Mobile version */
-@media (min-width: 1200px) {
 
+@media (min-width: 1200px) {
+	.mobile-block{
+		display: none;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-
+	.container{
+		width: 992px;
+		margin: auto;
+	}
+	.main-li{
+		padding-right: 15px;
+	}
+	.logo-li ~ .main-li {
+		padding-right: 0;
+		padding-left: 14px;
+	}
+	.circle {
+		margin-right: 141px;
+	}
+	.circle:after{
+		width: 141px;
+	}
+	.mobile-block{
+		display: none;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+	.container{
+		width: 768px;
+		margin: auto;
+	}
 	.circle{
 		margin-right: 100px;
 	}
 	.circle:last-child:after{
 		width: 0;
 	}
+	.circle:after{
+		width: 100px;
+	}
+	.main-menu{
+		display: none;
+	}
+	.mobile-block{
+		display: block;
+	}
+	.mobile-logo{
+		position: fixed;
+		z-index: 2;
+		width: 60px;
+		height: 68px;
+	}
 }
 
 @media (max-width: 767px) {
-	.block-down-menu{
+	.touch-bar, .main-menu{
 		display: none;
+	}
+	.mobile-block{
+		display: block;
+	}
+	.mobile-logo{
+		position: fixed;
+		z-index: 2;
+		width: 60px;
+		height: 68px;
 	}
 }
